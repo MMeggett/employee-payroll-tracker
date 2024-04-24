@@ -4,8 +4,7 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 // Collect employee data
 const collectEmployees = function () {
     // TODO: Get user input to create and return an array of employee objects
-    // confirm method returns true when ok
-    // everytime prompt ran append onto employee array function
+// make new object everytime function run
 
     const employeeObject = {
         firstName: "",
@@ -19,7 +18,6 @@ const collectEmployees = function () {
             employeePrompt();
         }
     }
-
 
     const employeesArray = []
 
@@ -50,102 +48,6 @@ const collectEmployees = function () {
     addNewEmployee();
     console.log(employeesArray)
     return employeesArray;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //get user input 
-    // create array of objects from input
-
-    // const addNewEmployee = function () {
-    //     let text = "Would you like to add another employee?";
-    //     if (confirm(text) == true){
-    //         collectEmployees();
-    //     }
-    // }
-
-    // let employeesArray = [
-    //     {
-    //         firstName: '',
-    //         lastName: '',
-    //         salary: ''
-    //     }
-    // ]
-
-    // // const employeeObject = {
-    // //     firstName: "",
-    // //     lastName: "",
-    // //     salary: "",
-    // // }
-
-    // // enter first name
-    // // make input first name object value
-    // // enter last name
-    // // make input last name object value
-    // // enter salary
-    // // make input salary object value
-    // // ask if want to enter other employee
-    // // if yes loop back and add new object to array
-    // // if no break out of loop
-
-    // let firstName = prompt("Enter first name:");
-    // if (firstName != null) {
-    //     console.log(firstName);
-    //     let lastName = prompt("Enter last name:");
-    //     if (lastName != null) {
-    //         console.log(lastName);
-    //         let salary = prompt("Enter salary");
-    //         if (salary != null) {
-    //             console.log(salary)
-
-    //             Object.defineProperties(employeesArray, {
-    //                 firstName: { value: firstName },
-    //                 lastName: { value: lastName },
-    //                 salary: { value: salary }
-    //             })
-    //             addNewEmployee();
-    //         }
-    //     }
-
-    // }
-
-    // console.log(employeeObject)
-    // return employeesArray;
-
 }
 
 
