@@ -4,13 +4,6 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 // Collect employee data
 const collectEmployees = function () {
     // TODO: Get user input to create and return an array of employee objects
-// make new object everytime function run
-
-    const employeeObject = {
-        firstName: "",
-        lastName: "",
-        salary: "",
-    }
 
     const addNewEmployee = function () {
         let text = "Would you like to add another employee?";
@@ -22,24 +15,26 @@ const collectEmployees = function () {
     const employeesArray = []
 
     const employeePrompt = function () {
+
         let firstName = prompt("Enter first name:");
         if (firstName != null) {
             console.log(firstName);
             let lastName = prompt("Enter last name:");
             if (lastName != null) {
                 console.log(lastName);
+                // Make so salary only affects numbers
                 let salary = prompt("Enter salary");
                 if (salary != null) {
                     console.log(salary)
-                    Object.defineProperties(employeeObject, {
-                        firstName: { value: firstName },
-                        lastName: { value: lastName },
-                        salary: { value: salary }
-                    })
-                    console.log(employeeObject);
-                    // adds created object to array
-                    employeesArray.push(employeeObject);
                 }
+
+                let employeeObject = {
+                    "firstName": firstName,
+                    "lastName": lastName,
+                    "salary": salary
+                }
+
+                employeesArray.push(employeeObject);
             }
         }
     }
