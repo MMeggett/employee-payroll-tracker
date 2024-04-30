@@ -17,17 +17,15 @@ const collectEmployees = function () {
 
         let firstName = prompt("Enter first name:");
         if (firstName != null) {
-            console.log(firstName);
             let lastName = prompt("Enter last name:");
             if (lastName != null) {
-                console.log(lastName);
                 // Make so salary only affects numbers
                 let salary = parseInt(prompt("Enter salary"));
                 if (isNaN(salary)) {
                     salary = 0
                 }
                 else (salary != null); {
-                    console.log(salary)
+                    
                 }
 
                 let employeeObject = {
@@ -43,12 +41,8 @@ const collectEmployees = function () {
 
     employeePrompt();
     addNewEmployee();
-    console.log(employeesArray)
     return employeesArray;
 }
-
-
-
 
 // Display the average salary
 const displayAverageSalary = function (employeesArray) {
@@ -56,25 +50,9 @@ const displayAverageSalary = function (employeesArray) {
     let total = 0;
     for (let i = 0; i < employeesArray.length; i++) {
         total += employeesArray[i].salary;
-        console.log(total)
     }
     console.log("The average employee salary between our " + employeesArray.length + " employee(s) is $" + total / employeesArray.length);
 }
-// function findAverage(employeesArray) {
-//     let sum = employeesArray.reduce((acc, curr) => acc + curr, 0);
-//     let average = sum / arr.length;
-//     return average;
-// }
-
-// const average = findAverage(employeesArray.salary);
-// console.log(average);
-//     function averageOfProperty(array, key) {
-//         const sum = array.reduce((acc, obj) => acc + (obj[key] || 0), 0);
-//         return array.length ? sum / array.length : 0;
-//       }
-
-//       const average = averageOfProperty(objects, 'value');
-// }
 
 // Select a random employee
 const getRandomEmployee = function (employeesArray) {
