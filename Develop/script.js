@@ -23,7 +23,10 @@ const collectEmployees = function () {
                 console.log(lastName);
                 // Make so salary only affects numbers
                 let salary = prompt("Enter salary");
-                if (salary != null) {
+                if (isNaN(salary)) {
+                    salary = 0
+                }
+                else (salary != null); {
                     console.log(salary)
                 }
 
@@ -50,6 +53,7 @@ const collectEmployees = function () {
 // Display the average salary
 const displayAverageSalary = function (employeesArray) {
     // TODO: Calculate and display the average salary
+    
 }
 
 // Select a random employee
